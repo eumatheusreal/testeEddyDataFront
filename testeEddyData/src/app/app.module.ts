@@ -10,6 +10,10 @@ import { BuscaComponent } from './component/busca/busca.component';
 import localePt from "@angular/common/locales/pt";
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { BuscaIdComponent } from './component/busca-id/busca-id.component';
+import { BuscaGeneroComponent } from './component/busca-genero/busca-genero.component';
+import { BuscaNascimentoComponent } from './component/busca-nascimento/busca-nascimento.component';
+import { MetodoBuscaComponent } from './component/metodo-busca/metodo-busca.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -17,8 +21,12 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     ClienteComponent,
-    BuscaComponent
-   ],
+    BuscaComponent,
+    BuscaIdComponent,
+    BuscaGeneroComponent,
+    BuscaNascimentoComponent,
+    MetodoBuscaComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

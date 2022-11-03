@@ -34,7 +34,7 @@ export class ClienteComponent implements OnInit {
   constructor(private service: ClienteService) {}
 
   ngOnInit() {
-    this.testar();
+    // this.testar();
   }
 
   salvar() {

@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Páginas configuradas
+  - [Cadastrar cliente](http://localhost:4200/cliente)
+  - [Lista de clientes disponíveis](http://localhost:4200/busca)
+  - [Procurar cliente por ID](http://localhost:4200/busca-id)
+  - [Procurar cliente por gênero](http://localhost:4200/busca-genero)
+  - [Procurar cliente por data de nascimento](http://localhost:4200/busca-nascimento)

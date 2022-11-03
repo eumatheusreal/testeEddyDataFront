@@ -21,4 +21,13 @@ export class BuscaComponent implements OnInit {
     });
   }
 
+  excluir(){
+    console.log("Vai excluir o registro atual");
+  }
+
+  alterar(){
+    console.log("Vai alterar o registro atual");
+
+  }
+
 }

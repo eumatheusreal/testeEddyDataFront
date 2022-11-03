@@ -1,5 +1,17 @@
-<div style="padding-top: 40px;">
-  <table class="table table-bordered">
+<div *ngIf="clientes.length == 0; else temCliente">
+  <form (ngSubmit)="pesquisar()">
+    <div class="mb-3">
+      <label for="dataInicial">Data Inicial</label>
+      <input type="date" name="dataInicial" id="dataInicial" [(ngModel)]="dataInicial" class="form-control">
+      <label for="dataFinal">Data Final</label>
+      <input type="date" name="dataFinal" id="dataFinal" [(ngModel)]="dataFinal" class="form-control">
+    </div>
+    <button class="btn btn-primary">Pesquisar</button>
+  </form>
+</div>
+
+<ng-template #temCliente>
+  <table class="table table-bordered" >
     <thead>
       <tr>
         <th scope="col">Nome</th>
@@ -22,11 +34,9 @@
         <th scope="col">E-mail</th>
         <th scope="col">Cidade</th>
         <th scope="col">Data de Nascimento</th>
-        <th scope="col">Alterar</th>
-        <th scope="col">Excluir</th>
       </tr>
     </thead>
-    <tbody *ngIf="!!clientes; else listaVazia">
+    <tbody>
         <tr *ngFor="let cliente of clientes">
           <td scope="row">{{cliente?.nome}}</td>
           <td scope="row">{{cliente?.cpf}}</td>
@@ -48,12 +58,7 @@
           <td scope="row">{{cliente?.email}}</td>
           <td scope="row">{{cliente?.cidade}}</td>
           <td scope="row">{{cliente?.datadenascimento | date:"short"}}</td>
-          <td scope="row"><button class="btn btn-warning">Alterar</button></td>
-          <td scope="row"><button class="btn btn-danger">Excluir</button></td>
         </tr>
     </tbody>
-    <ng-template #listaVazia>
-      <p>Nenhum cliente cadastrado</p>
-    </ng-template>
   </table>
-</div>
+</ng-template>
